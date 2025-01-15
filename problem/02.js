@@ -7,6 +7,18 @@
  *
  * @returns {Function} - 클로저 함수
  */
-function closureOne() {}
+function closureOne() {
+    // 1번
+    let count = 0;
+
+    // 3번
+    function increment(){
+        count++;
+        return count;
+    }
+
+    // 2번
+    return increment;
+}
 
 export { closureOne };

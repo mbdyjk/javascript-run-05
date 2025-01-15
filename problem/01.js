@@ -10,7 +10,20 @@
  */
 
 // TODO: 전역 변수 선언
+// 1번
+const global = "Global";
 
-function scopeChainOne() {}
+function scopeChainOne() {
+    // 2번
+    const b = "Local";
+    
+    // 3번
+    function inner(){
+        return `${global} - ${b}`;
+    }
+
+    // 4번
+    return inner();
+}
 
 export { global, scopeChainOne };

@@ -11,6 +11,17 @@
  * @returns {Function} - calc(op, num)
  */
 
-function closureWithParams() {}
+function closureWithParams() {
+    let base = 10;
+
+    // calc 함수 1,2,3,4번 조건에 맞게 만들기
+    function calc(op, num) {
+        if (op === '+') return base + num;
+        else if (op === '-') return base - num;
+        else return 'invalid';
+    }
+
+    return calc;
+}
 
 export { closureWithParams };
